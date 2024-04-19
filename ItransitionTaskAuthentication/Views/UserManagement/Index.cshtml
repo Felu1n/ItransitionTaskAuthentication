@@ -1,0 +1,60 @@
+﻿@model List<ItransitionTaskAuthentication.Models.UserModel>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h2>Users</h2>
+
+<form asp-controller="UserManagement" asp-action="ManageUsers" method="post">
+    <div class="toolbar">
+        <button type="button" id="selectAll">Select All</button>
+        <button type="submit" name="action" value="Block">Block</button>
+        <button type="submit" name="action" value="Unblock">Unblock</button>
+        <button type="submit" name="action" value="Delete">Delete</button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAllCheckbox" /></th>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Registration Date</th>
+                <th>Last Login Date</th>
+                <th>Status</th>
+                <th>IsDeleted</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td><input type="checkbox" name="selectedUsers" value="@user.Id" class="userCheckbox" /></td>
+                    <td>@user.Id</td>
+                    <td>@user.Username</td>
+                    <td>@user.Email</td>
+                    <td>@user.RegistrationDate.ToString("yyyy-MM-dd")</td>
+                    <td>@user.LastLoginDate.ToString("yyyy-MM-dd")</td>
+                    <td>@(user.IsBlocked ? "Blocked" : "Active")</td>
+                    <td>@(user.IsDeleted ? "Deleted" : "Active")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+
+@section Scripts {
+    <script>
+        // Обработчик для кнопки "Select All"
+        $('#selectAll').click(function () {
+            $('.userCheckbox').prop('checked', $(this).text() === 'Select All');
+            $(this).text($(this).text() === 'Select All' ? 'Deselect All' : 'Select All');
+        });
+
+        // Обработчик для чекбокса в заголовке таблицы
+        $('#selectAllCheckbox').change(function () {
+            $('.userCheckbox').prop('checked', $(this).prop('checked'));
+        });
+    </script>
+}

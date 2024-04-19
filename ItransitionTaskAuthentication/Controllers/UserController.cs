@@ -1,6 +1,10 @@
 ﻿using ItransitionTaskAuthentication.Models;
 using Microsoft.AspNetCore.Mvc;
 using ItransitionTaskAuthentication.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 
 namespace YourProjectNamespace.Controllers
@@ -62,12 +66,24 @@ namespace YourProjectNamespace.Controllers
         public async Task<IActionResult> Login(UserModel model)
         {
             
-            // Поиск пользователя в базе данных по имени пользователя и паролю
-            var user = _context.Users.FirstOrDefault(u => u.Username == model.Username && u.Password == model.Password);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == model.Username && u.Password == model.Password);
             if (user != null)
             {
-                // Успешная аутентификация, выполните необходимые действия
-                // Например, можно сохранить информацию о пользователе в сессии или установить куки
+                // Успешная аутентификация, установите аутентификационные куки
+                var claims = new List<Claim>
+                {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()), // Идентификатор пользователя
+                new Claim(ClaimTypes.Name, user.Username) // Имя пользователя
+                // Другие дополнительные утверждения (например, роли пользователя)
+                };
+
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var principal = new ClaimsPrincipal(identity);
+                user.LastLoginDate = DateTime.Now;
+                _context.SaveChanges();
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+                // Перенаправление на главную страницу или другую страницу
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -75,9 +91,15 @@ namespace YourProjectNamespace.Controllers
                 ModelState.AddModelError(string.Empty, "Неверное имя пользователя или пароль.");
                 return View(model);
             }
-           
-
-            return View(model);
+            
         }
+        public async Task<IActionResult> Logout()
+        {
+      
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }
