@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using ItransitionTaskAuthentication.Data;
 using ItransitionTaskAuthentication.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ItransitionTaskAuthentication.Controllers
 {
+    [Authorize]
     public class UserManagementController : Controller
     {
         private readonly ApplicationDbContext _context;

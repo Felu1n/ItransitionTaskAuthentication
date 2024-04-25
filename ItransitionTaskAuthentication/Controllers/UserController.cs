@@ -9,7 +9,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System;
 
-namespace YourProjectNamespace.Controllers
+namespace ItransitionTaskAuthentication.Controllers
 {
     public class UserController : Controller
     {
@@ -55,7 +55,7 @@ namespace YourProjectNamespace.Controllers
                 _context.Users.Add(newUser);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Login", "User");
             }
 
             return View(model);
@@ -91,7 +91,7 @@ namespace YourProjectNamespace.Controllers
                 await _context.SaveChangesAsync();
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "UserManagement");
             }
             else
             {
@@ -107,7 +107,7 @@ namespace YourProjectNamespace.Controllers
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "User");
         }
     }
 }
