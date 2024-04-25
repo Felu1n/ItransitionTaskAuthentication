@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="RD-241.14494.325">
-    <data-source name="ItransitionUser@DESKTOP-HCO0V3M" uuid="0a3d6004-cee6-4076-9e18-b631ec089923">
+    <data-source name="ItransitionUser@DESKTOP-HCO0V3M" uuid="168e5182-eade-447c-8102-9aeffafa31c2">
       <database-info product="Microsoft SQL Server" version="16.00.1000" jdbc-version="4.2" driver-name="JetBrains JDBC Driver for SQL Server" driver-version="1.0" dbms="MSSQL" exact-version="16.0.1000" exact-driver-version="1.0">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="ItransitionUser@DESKTOP-HCO0V3M [2]" uuid="e66ef389-8339-4335-97b9-c56f4f871956">
+      <database-info product="Microsoft SQL Server" version="16.00.1000" jdbc-version="4.2" driver-name="JetBrains JDBC Driver for SQL Server" driver-version="1.0" dbms="MSSQL" exact-version="16.0.1000" exact-driver-version="1.0">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="itransitionUsers@intransition.database.windows.net" uuid="d9518c40-3106-44e5-bf99-bfc563e17bad">
+      <database-info product="Microsoft SQL Server" version="12.00.5409" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 12.2 for SQL Server" driver-version="12.2.0.0" dbms="AZURE" exact-version="12.0.5409" exact-driver-version="12.2">
         <extra-name-characters>$#@</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>

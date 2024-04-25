@@ -23,7 +23,7 @@
                 <th>Registration Date</th>
                 <th>Last Login Date</th>
                 <th>Status</th>
-                <th>IsDeleted</th>
+
             </tr>
         </thead>
         <tbody>
@@ -37,7 +37,7 @@
                     <td>@user.RegistrationDate.ToString("yyyy-MM-dd")</td>
                     <td>@user.LastLoginDate.ToString("yyyy-MM-dd")</td>
                     <td>@(user.IsBlocked ? "Blocked" : "Active")</td>
-                    <td>@(user.IsDeleted ? "Deleted" : "Active")</td>
+                   
                 </tr>
             }
         </tbody>

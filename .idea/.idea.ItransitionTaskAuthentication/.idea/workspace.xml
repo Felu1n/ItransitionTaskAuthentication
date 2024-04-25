@@ -10,23 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea027fa3-1c2c-48f7-8a2e-59eb419b84b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ItransitionTaskAuthentication/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ItransitionTaskAuthentication/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ItransitionTaskAuthentication/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ItransitionTaskAuthentication/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/20240420095158_changeEmailConfigure.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/20240420095158_changeEmailConfigure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ItransitionTaskAuthentication/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ItransitionTaskAuthentication/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ItransitionTaskAuthentication/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ItransitionTaskAuthentication/.idea/shelf/Changes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ItransitionTaskAuthentication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ItransitionTaskAuthentication/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Controllers/UserManagementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Controllers/UserManagementController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/ItransitionTaskAuthentication.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/ItransitionTaskAuthentication.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/20240419143412_InitialCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/20240420092418_InitialCreate.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/20240419143412_InitialCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/20240420092418_InitialCreate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/20240419143412_InitialCreate.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/20240419143412_InitialCreate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Models/UserModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Models/UserModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Views/Home/Privacy.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Views/User/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Views/User/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Views/User/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Views/User/Register.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/Views/UserManagement/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/Views/UserManagement/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItransitionTaskAuthentication/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ItransitionTaskAuthentication/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +32,13 @@
   </component>
   <component name="DpaMonitoringSettings">
     <option name="autoShow" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSON File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,35 +52,40 @@
     &quot;accountId&quot;: &quot;9c4500fe-a07d-428c-816c-6e4ccb2cb5ad&quot;
   }
 }</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2fKqD2f40fMv2bkGsJMYWb3L4UW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.ItransitionTaskAuthentication: IIS Express.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "HotReloadSettingsPage",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.ItransitionTaskAuthentication: IIS Express.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;HotReloadSettingsPage&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Namaru\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Namaru\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Namaru\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;azure&quot;
+    ],
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Namaru\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Namaru\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Namaru\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ItransitionTaskAuthentication: IIS Express">
     <configuration name="ItransitionTaskAuthentication: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ItransitionTaskAuthentication/ItransitionTaskAuthentication.csproj" />
@@ -136,12 +145,16 @@
       <workItem from="1713560209312" duration="136000" />
       <workItem from="1713603015687" duration="775000" />
       <workItem from="1713604035849" duration="3798000" />
+      <workItem from="1713609181661" duration="45000" />
+      <workItem from="1714035026736" duration="5723000" />
+      <workItem from="1714044782055" duration="2324000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

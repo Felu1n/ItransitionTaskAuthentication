@@ -18,7 +18,6 @@ namespace ItransitionTaskAuthentication.Controllers
 
         public IActionResult Index()
         {
-            // Получаем всех пользователей из базы данных
             var users = _context.Users.ToList();
             return View(users);
         }
@@ -28,7 +27,6 @@ namespace ItransitionTaskAuthentication.Controllers
         {
             if (selectedUsers == null || selectedUsers.Length == 0)
             {
-                // Пользователь не выбрал ни одного пользователя
                 ModelState.AddModelError("", "Please select at least one user.");
                 return RedirectToAction("Index");
             }
@@ -39,7 +37,6 @@ namespace ItransitionTaskAuthentication.Controllers
 
                 if (user == null)
                 {
-                    // Пользователь с заданным идентификатором не найден
                     ModelState.AddModelError("", $"User with ID {userId} not found.");
                     return RedirectToAction("Index");
                 }
@@ -53,20 +50,15 @@ namespace ItransitionTaskAuthentication.Controllers
                         user.IsBlocked = false;
                         break;
                     case "Delete":
-                        user.IsDeleted = true;
+                        _context.Users.Remove(user);
                         break;
                     default:
-                        // Действие не распознано
                         ModelState.AddModelError("", "Invalid action.");
                         return RedirectToAction("Index");
                 }
-
             }
-
-            // Сохраняем изменения в базе данных
             _context.SaveChanges();
 
-            // Перенаправление на страницу с пользователями после выполнения действия
             return RedirectToAction("Index");
         }
     }
