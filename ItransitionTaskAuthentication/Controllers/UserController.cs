@@ -31,15 +31,19 @@ namespace ItransitionTaskAuthentication.Controllers
         {
             if (ModelState.IsValid)
             {
- 
-                var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Username == model.Username || u.Email == model.Email);
-                if (existingUser != null)
+                var existingUsername = await _context.Users.FirstOrDefaultAsync(u => u.Username == model.Username);
+                if (existingUsername != null)
                 {
-                    ModelState.AddModelError(string.Empty, "Username or email already exists.");
+                    ModelState.AddModelError(string.Empty, "Username already exists.");
                     return View(model);
                 }
 
-
+                var existingEmail = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email);
+                if (existingEmail != null)
+                {
+                    ModelState.AddModelError(string.Empty, "Email already exists.");
+                    return View(model);
+                }
                 string hashedPassword = BCrypt.Net.BCrypt.HashPassword(model.Password);
 
                 var newUser = new UserModel
